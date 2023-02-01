@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/min_margin"
+    android:layout_marginEnd="@dimen/min_margin">
+
+    <View
+        android:id="@+id/viewColor"
+        style="@style/color_lesson_view_style"
+        app:layout_constraintBottom_toBottomOf="@id/cardView"
+        app:layout_constraintStart_toStartOf="@id/cardView"
+        app:layout_constraintTop_toTopOf="@id/cardView" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/recycler_margin"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:cardCornerRadius="@dimen/corner_radius"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/colorStroke"
+        app:strokeWidth="@dimen/stroke_lesson_size">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/timeStart"
+                style="@style/start_time_text_style"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="13:45" />
+
+            <TextView
+                android:id="@+id/timeEnd"
+                style="@style/end_time_text_style"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/timeStart"
+                tools:text="15:45" />
+
+            <TextView
+                android:id="@+id/tittleLesson"
+                style="@style/name_lesson_text_style"
+                app:layout_constraintStart_toEndOf="@id/timeStart"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Персональная " />
+
+            <ImageView
+                android:id="@+id/iconView"
+                android:layout_width="@dimen/user_icon_lessons_size"
+                android:layout_height="@dimen/user_icon_lessons_size"
+                android:src="@drawable/user"
+                app:layout_constraintBottom_toBottomOf="@id/timeEnd"
+                app:layout_constraintStart_toStartOf="@id/tittleLesson"
+                app:layout_constraintTop_toTopOf="@id/timeEnd" />
+
+            <TextView
+                android:id="@+id/slots_available"
+                style="@style/trainer_name_text_style"
+                app:layout_constraintBottom_toBottomOf="@id/timeEnd"
+                app:layout_constraintStart_toEndOf="@id/iconView"
+                app:layout_constraintTop_toBottomOf="@id/tittleLesson"
+                tools:text="Мест: 20" />
+
+            <TextView
+                android:id="@+id/nameTrainer"
+                style="@style/trainer_name_text_style"
+                app:layout_constraintBottom_toBottomOf="@id/timeEnd"
+                app:layout_constraintStart_toEndOf="@id/iconView"
+                app:layout_constraintTop_toBottomOf="@id/tittleLesson"
+                tools:text="Мишенин Даниил" />
+
+            <ImageView
+                android:id="@+id/ic_location"
+                android:layout_width="15dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/location"
+                app:layout_constraintBottom_toBottomOf="@id/nameTrainer"
+                app:layout_constraintStart_toEndOf="@id/nameTrainer"
+                app:layout_constraintTop_toTopOf="@id/nameTrainer" />
+
+            <TextView
+                android:id="@+id/tittleLocation"
+                style="@style/place_text_style"
+                app:layout_constraintBottom_toBottomOf="@id/nameTrainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ic_location"
+                tools:text="Тренажерный зал" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

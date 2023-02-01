@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/lessonsFragment"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/lessons" />
+    <item
+        android:id="@+id/bidsFragment"
+        android:icon="@drawable/ic_check"
+        android:title="@string/bids" />
+    <item
+        android:id="@+id/addFragment"
+        android:icon="@drawable/ic_add"
+        android:title="@string/add" />
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat" />
+    <item
+        android:id="@+id/anotherFragment"
+        android:icon="@drawable/ic_dots"
+        android:title="@string/another" />
+</menu>

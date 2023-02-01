@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normal_margin">16dp</dimen>
+    <dimen name="big_margin">27dp</dimen>
+    <dimen name="min_margin">10dp</dimen>
+    <dimen name="recycler_margin">5dp</dimen>
+    <dimen name="normal_radius">20dp</dimen>
+    <dimen name="big_text_size">19sp</dimen>
+    <dimen name="normal_text_size">17sp</dimen>
+    <dimen name="label_text_size">14sp</dimen>
+    <dimen name="corner_radius">10dp</dimen>
+    <dimen name="user_icon_lessons_size">17dp</dimen>
+    <dimen name="start_lesson_time_margin">20dp</dimen>
+    <dimen name="stroke_lesson_size">2dp</dimen>
+    <dimen name="place_text_size">11sp</dimen>
+    <dimen name="name_trainer_text_size">13sp</dimen>
+    <dimen name="width_name_trainer">130dp</dimen>
+    <dimen name="size_progress_bar">50dp</dimen>
+</resources>
