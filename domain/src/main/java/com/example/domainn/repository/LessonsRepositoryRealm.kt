@@ -6,7 +6,6 @@ import com.example.domainn.models.realmModels.SummaryModelRealm
 import kotlinx.coroutines.flow.Flow
 
 interface LessonsRepositoryRealm {
-
     suspend fun insertLessons(list : MutableList<SummaryModelRealm>)
     suspend fun getLessons(function:(MutableList<SummaryModelRealm>) -> Unit)
 }

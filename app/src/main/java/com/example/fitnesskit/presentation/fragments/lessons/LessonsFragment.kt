@@ -48,10 +48,7 @@ class LessonsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         mRecyclerLessons.adapter = mLessonAdapter
-        mViewModel.summaryLessons.observe(viewLifecycleOwner){ lessonsList ->
-            mProgress.visibility = View.GONE
-            mLessonAdapter.setList(lessonsList)
-        }
+        initObservers()
 
         if(mCheckConnection.check()){
             mViewModel.getSummaryInfoLessons()
@@ -59,6 +56,13 @@ class LessonsFragment : Fragment() {
         else{
             mViewModel.getLessonsCache()
             context?.let { showToast(it, resources.getString(R.string.no_connection)) }
+        }
+    }
+
+    private fun initObservers(){
+        mViewModel.summaryLessons.observe(viewLifecycleOwner){ lessonsList ->
+            mProgress.visibility = View.GONE
+            mLessonAdapter.setList(lessonsList)
         }
     }
 
