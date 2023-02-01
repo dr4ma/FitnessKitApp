@@ -61,8 +61,10 @@ class LessonsFragment : Fragment() {
 
     private fun initObservers(){
         mViewModel.summaryLessons.observe(viewLifecycleOwner){ lessonsList ->
-            mProgress.visibility = View.GONE
-            mLessonAdapter.setList(lessonsList)
+            if(lessonsList.isNotEmpty()){
+                mProgress.visibility = View.GONE
+                mLessonAdapter.setList(lessonsList)
+            }
         }
     }
 
