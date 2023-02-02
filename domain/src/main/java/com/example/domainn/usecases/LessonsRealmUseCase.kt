@@ -9,17 +9,17 @@ import javax.inject.Inject
 
 class LessonsRealmUseCase @Inject constructor(private val lessonsRepositoryRealm: LessonsRepositoryRealm) {
 
-    suspend fun insertLessons(list : MutableList<SummaryModel>){
+    suspend fun insertLessonsCache(list : MutableList<SummaryModel>){
         val realmModelsList = mutableListOf<SummaryModelRealm>()
         list.forEach{ model ->
             realmModelsList.add(model.mapToRealm())
         }
-        lessonsRepositoryRealm.insertLessons(realmModelsList)
+        lessonsRepositoryRealm.insertLessonsCache(realmModelsList)
     }
 
-    suspend fun getLessons(function:(MutableList<SummaryModel>) -> Unit){
+    suspend fun getLessonsCache(function:(MutableList<SummaryModel>) -> Unit){
         val lessonModelsList = mutableListOf<SummaryModel>()
-        lessonsRepositoryRealm.getLessons{
+        lessonsRepositoryRealm.getLessonsCache{
             it.forEach{ modelRealm ->
                 lessonModelsList.add(modelRealm.mapToLesson())
             }

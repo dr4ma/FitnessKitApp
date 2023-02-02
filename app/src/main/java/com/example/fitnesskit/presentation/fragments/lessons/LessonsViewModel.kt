@@ -57,19 +57,19 @@ class LessonsViewModel @Inject constructor(
                 }
             }
         }
-        insertLessons(summaryList)
+        insertLessonsCache(summaryList)
         return summaryList
     }
 
-    private fun insertLessons(list : MutableList<SummaryModel>) {
+    private fun insertLessonsCache(list : MutableList<SummaryModel>) {
         viewModelScope.launch {
-            lessonsRealmUseCase.insertLessons(list)
+            lessonsRealmUseCase.insertLessonsCache(list)
         }
     }
 
     fun getLessonsCache(){
         viewModelScope.launch {
-            lessonsRealmUseCase.getLessons{
+            lessonsRealmUseCase.getLessonsCache{
                 _summaryLessons.postValue(it)
             }
         }
