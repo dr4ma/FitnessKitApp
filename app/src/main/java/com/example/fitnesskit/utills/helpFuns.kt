@@ -1,11 +1,7 @@
 package com.example.fitnesskit.utills
 
 import android.content.Context
-import android.graphics.Color
-import android.view.View
 import android.widget.Toast
-import com.example.fitnesskit.R
-import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -18,7 +14,7 @@ fun String.toDate(): Date? {
     return dateFormat.parse(this)
 }
 
-fun showToast(context: Context, text: String) {
+fun showToast(context: Context?, text: String) {
     Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
 }
 

@@ -13,7 +13,6 @@ import com.example.fitnesskit.utills.GET_LESSONS_CACHE_TAG
 import com.example.fitnesskit.utills.GET_SUMMARY_INFO_TAG
 import com.example.fitnesskit.utills.mapToSummary
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.coroutines.launch

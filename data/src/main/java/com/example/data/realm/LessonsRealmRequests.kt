@@ -1,13 +1,10 @@
 package com.example.data.realm
 
-import android.util.Log
 import com.example.data.utills.RealmErrorCallback
 import com.example.domainn.models.realmModels.SummaryModelRealm
 import com.example.domainn.repository.LessonsRepositoryRealm
 import io.reactivex.rxjava3.subjects.BehaviorSubject
 import io.realm.Realm
-import java.text.SimpleDateFormat
-import java.util.*
 
 class LessonsRealmRequests(private val realm: Realm) : LessonsRepositoryRealm {
 

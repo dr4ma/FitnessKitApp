@@ -55,7 +55,7 @@ class LessonsFragment : Fragment() {
         }
         else{
             mViewModel.getLessonsCache()
-            context?.let { showToast(it, resources.getString(R.string.no_connection)) }
+            showToast(context, resources.getString(R.string.no_connection))
         }
     }
 

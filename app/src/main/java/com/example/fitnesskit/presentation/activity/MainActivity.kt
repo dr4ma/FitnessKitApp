@@ -8,8 +8,6 @@ import com.example.fitnesskit.R
 import com.example.fitnesskit.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
-import io.realm.Realm
-import io.realm.RealmObject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

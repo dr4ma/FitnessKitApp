@@ -4,7 +4,6 @@ import android.app.Service
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.NetworkInfo
 import javax.inject.Inject
 
 class CheckConnection @Inject constructor(private val context: Context) {

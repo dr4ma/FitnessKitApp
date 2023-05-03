@@ -35,27 +35,4 @@ class LessonsRequests : LessonsRepository {
             })
         }
     }
-
-//    override fun getLessons(): Observable<LessonModel> {
-//        var list = mutableListOf<LessonModel>()
-//            val request = RetrofitInstance.apiService.getGeneralInfoLessons()
-//            request.enqueue(object : Callback<GeneralModel> {
-//
-//                override fun onResponse(
-//                    call: Call<GeneralModel>,
-//                    response: Response<GeneralModel>
-//                ) {
-//                    val generalModel = response.body()
-//                    if (generalModel != null) {
-//                       list = generalModel.lessons
-//                    }
-//                }
-//
-//                override fun onFailure(call: Call<GeneralModel>, error: Throwable) {
-//                    Log.e(LESSON_REQUEST_TAG, error.message.toString())
-//
-//                }
-//            })
-//        return Observable.fromIterable(list)
-//    }
 }
