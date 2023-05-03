@@ -3,7 +3,7 @@ package com.example.fitnesskit.utills
 import com.example.domainn.models.LessonModel
 import com.example.domainn.models.SummaryModel
 
-fun LessonModel.mapToSummary( trainerName: String, tittle : Boolean) : SummaryModel{
+fun LessonModel.mapToSummary(trainerName: String, tittle : Boolean) : SummaryModel{
     return SummaryModel(
         id = this.appointment_id,
         lessonName = this.name,

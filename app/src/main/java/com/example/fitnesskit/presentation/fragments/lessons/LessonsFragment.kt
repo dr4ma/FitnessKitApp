@@ -63,13 +63,19 @@ class LessonsFragment : Fragment() {
         mViewModel.summaryLessons.observe(viewLifecycleOwner){ lessonsList ->
             if(lessonsList.isNotEmpty()){
                 mProgress.visibility = View.GONE
+                mBinding.emptyList.visibility = View.GONE
                 mLessonAdapter.setList(lessonsList)
+            }
+            else{
+                mProgress.visibility = View.GONE
+                mBinding.emptyList.visibility = View.VISIBLE
             }
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        mViewModel.clearDisposeBag()
         binding = null
     }
 }

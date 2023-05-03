@@ -9,4 +9,5 @@
     <string name="another">Еще</string>
     <string name="schedule">Расписание</string>
     <string name="no_connection">Нет соединения</string>
+    <string name="lessons_empty">Расписание пусто</string>
 </resources>

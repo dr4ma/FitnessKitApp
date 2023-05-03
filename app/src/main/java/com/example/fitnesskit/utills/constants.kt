@@ -27,3 +27,7 @@ const val NORMAL = 1
 
 // Database Name
 const val DATABASE_NAME = "lessonsDB"
+
+// Error Tags
+const val GET_LESSONS_CACHE_TAG = "Get lessons cache error"
+const val GET_SUMMARY_INFO_TAG = "Get summary info lessons error"
